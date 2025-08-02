@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>AS propiedades</title>
+  <title>AS Propiedades</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="Style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,20 @@
 </head>
 <body>
 
+  <div class="fixed-header" id="fixed-header">
+    <div class="brand">AS</div>
+  </div>
+
+  <div class="menu-backdrop" id="backdrop"></div>
+  <nav class="side-menu" id="side-menu" aria-label="Menú principal">
+    <button class="close-btn" id="close-menu" aria-label="Cerrar menú">✕</button>
+    <a href="#about">Sobre nosotros</a>
+    <a href="#productos">Propiedades</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <!-- HERO / HEADER ORIGINAL -->
   <header class="encabezado">
     <div class="video-fondo-wrapper">
       <video class="video-fondo-element" autoplay muted loop playsinline aria-hidden="true" poster="MEDIA/poster.jpg">
@@ -44,10 +58,73 @@
   <a id="whatsapp-float" aria-label="Chatear por WhatsApp" target="_blank" rel="noopener"
      href="https://wa.me/542915771657?text=Hola%2C%20quisiera%20consultar%20sobre%20una%20propiedad...">
       <svg width="32" height="32" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.472-.149-.672.15-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.298.298-.497.1-.198.05-.372-.025-.521-.075-.149-.672-1.612-.92-2.21-.242-.579-.487-.5-.672-.51l-.572-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.693.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.004 2.003c-5.52 0-9.997 4.476-9.997 9.998 0 1.76.462 3.478 1.342 4.993L2 22l5.299-1.39a9.94 9.94 0 004.705 1.187h.002c5.52 0 9.997-4.477 9.997-9.998 0-5.52-4.477-9.997-9.998-9.997zm0 18.296c-1.51 0-2.986-.397-4.275-1.147l-.305-.18-3.14.825.84-3.064-.198-.316a8.242 8.242 0 01-1.254-4.34c0-4.564 3.714-8.278 8.277-8.278 4.564 0 8.278 3.714 8.278 8.278 0 4.565-3.714 8.279-8.278 8.279z"/>
-  </svg>  
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.1-.472-.149-.672.15-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.298.298-.497.1-.198.05-.372-.025-.521-.075-.149-.672-1.612-.92-2.21-.242-.579-.487-.5-.672-.51l-.572-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.693.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.004 2.003c-5.52 0-9.997 4.476-9.997 9.998 0 1.76.462 3.478 1.342 4.993L2 22l5.299-1.39a9.94 9.94 0 004.705 1.187h.002c5.52 0 9.997-4.477 9.997-9.998 0-5.52-4.477-9.997-9.998-9.997zm0 18.296c-1.51 0-2.986-.397-4.275-1.147l-.305-.18-3.14.825.84-3.064-.198-.316a8.242 8.242 0 01-1.254-4.34c0-4.564 3.714-8.278 8.277-8.278 4.564 0 8.278 3.714 8.278 8.278 0 4.565-3.714 8.279-8.278 8.279z"/>
+      </svg>  
   </a>
+  <footer class="site-footer">
+  <div class="footer-container">
 
+    <div class="footer-column">
+      <div class="footer-brand">AS</div>
+      <p class="footer-description">En AS Propiedades conectamos personas con oportunidades, ayudándote a encontrar el lugar perfecto para tu próxima historia.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-title">Enlaces rápidos</h3>
+      <ul class="footer-links">
+        <li><a href="#about">Sobre nosotros</a></li>
+        <li><a href="#productos">Propiedades</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Testimonios</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-title">Contacto</h3>
+      <ul class="footer-contact">
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602zm0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+          <span>Av. Siempreviva 742, Buenos Aires</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>
+          <span>+54 2915 77-1657</span>
+        </li>
+        <li>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+          <span>info@aspropiedades.com</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Columna 4: Newsletter -->
+    <div class="footer-column">
+      <h3 class="footer-title">Newsletter</h3>
+      <p class="footer-newsletter-text">Suscríbete para recibir novedades de propiedades exclusivas.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Tu email" required>
+        <button type="submit">Suscribirse</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-container">
+      <p>&copy; 2023 AS Propiedades. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+  <script src="script.js"></script>
 </body>
 </html>
+
