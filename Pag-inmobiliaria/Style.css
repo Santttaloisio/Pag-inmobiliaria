@@ -246,6 +246,13 @@ section {
   gap: 1rem;
 }
 
+.grilla-productos .productos {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .grilla-productos h2 {
   text-align: center;
   font-size: 2rem;
@@ -406,32 +413,49 @@ section {
 
 .newsletter-form {
   display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 .newsletter-form input {
-  padding: 0.8rem;
-  border: none;
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 2px solid #3498db;
   border-radius: 4px;
   font-family: inherit;
+  font-size: 1rem;
+  color: #ecf0f1;
+  background: transparent;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.newsletter-form input::placeholder {
+  color: #bdc3c7;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: #2980b9;
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #fff;
 }
 
 .newsletter-form button {
   background: #3498db;
   color: white;
-  border: none;
-  padding: 0.8rem;
+  border: 2px solid #3498db;
+  padding: 0 1.2rem;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
-  transition: background 0.3s ease;
+  font-size: 1rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .newsletter-form button:hover {
   background: #2980b9;
+  border-color: #2980b9;
 }
-
 .footer-bottom {
   background: #1a252f;
   padding: 1.5rem 0;
