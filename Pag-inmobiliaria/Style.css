@@ -246,13 +246,13 @@ section {
   gap: 1rem;
 }
 
-.grilla-productos .productos {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
+
 .grilla-productos h2 {
   text-align: center;
   font-size: 2rem;
