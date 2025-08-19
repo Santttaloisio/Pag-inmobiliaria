@@ -254,6 +254,7 @@ section {
   padding: 2rem;
 }
 
+<<<<<<< HEAD
 .productos {
   background: #fff;
   border-radius: 12px;
@@ -264,6 +265,20 @@ section {
   display: flex;
   flex-direction: column; /* fuerza que la imagen esté arriba y el texto abajo */
   align-items: center;
+=======
+.grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.grilla-productos h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+>>>>>>> e6e426ac79a55587f4d3be0b73d9c77e4d86ff46
 }
 
 .productos img {
