@@ -257,6 +257,11 @@ section {
   margin: 0 auto;          /* centrar dentro de la página */
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .productos {
   background: #fff;
   border-radius: 12px;

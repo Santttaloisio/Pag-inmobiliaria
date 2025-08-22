@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "Edificio \"Luxury\"",
+        "imagen": "/Pag-inmobiliaria/MEDIA/Img-Prueba.jpg",
+        "descripcion": "Edificio de lujo con vistas panorámicas, gimnasio y piscina.",
+        "ubicacion": "Calle Falsa 123, Ciudad",
+        "precio":350000
+    },
+    {
+        "id": 2,
+        "nombre": "Edificio Moderno",
+        "imagen": "/Pag-inmobiliaria/MEDIA/Prueba2.jpg",
+        "descripcion": "Edificio moderno con diseño contemporáneo, cerca de parques y tiendas.",
+        "ubicacion": "Avenida Siempre Viva 456, Ciudad",
+        "precio": 250000
+    }
+
+
+]
