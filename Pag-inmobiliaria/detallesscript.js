@@ -7,16 +7,20 @@ const contenedor = document.getElementById("detalle");
 
 // Cargar JSON y mostrar la propiedad
 fetch("/Pag-inmobiliaria/Propiedades.json")
-  .then(res => res.json())
+  .then(res => {
+    if (!res.ok) throw new Error("No se pudo cargar el archivo JSON");
+    return res.json();
+  })
   .then(data => {
-    const propiedad = data.find(p => p.id == idProp);
+    if (!Array.isArray(data)) throw new Error("El formato de datos no es válido");
+    const propiedad = data.find(p => String(p.id) === String(idProp));
     if (propiedad) {
       contenedor.innerHTML = `
-        <h2>${propiedad.nombre}</h2>
-        <img src="${propiedad.imagen}" alt="${propiedad.titulo}">
-        <p>${propiedad.descripcion}</p>
-        <p><strong>Ubicación:</strong> ${propiedad.ubicacion}</p>
-        <p><strong>Precio:</strong> $${propiedad.precio}</p>
+        <h2>${propiedad.nombre || "Sin nombre"}</h2>
+        <img src="${propiedad.imagen || "#"}" alt="${propiedad.titulo || propiedad.nombre || ""}">
+        <p>${propiedad.descripcion || "Sin descripción"}</p>
+        <p><strong>Ubicación:</strong> ${propiedad.ubicacion || "No especificada"}</p>
+        <p><strong>Precio:</strong> $${propiedad.precio || "No disponible"}</p>
       `;
     } else {
       contenedor.innerHTML = "<p>No se encontró la propiedad.</p>";
